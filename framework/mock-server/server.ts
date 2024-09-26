@@ -1,8 +1,8 @@
 import { setupServer } from 'msw/node';
-import { handler } from './handler';
+import { randomUserHandler } from './handler';
 
 export const startMswServer = async () => {
-  const worker = setupServer(handler);
+  const worker = setupServer(randomUserHandler);
 
   return worker.listen();
 };
